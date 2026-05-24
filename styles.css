@@ -129,6 +129,70 @@ body {
   font-weight: 500;
 }
 
+.contact-info__item--email {
+  cursor: pointer;
+  font-family: inherit;
+  background: transparent;
+  border: 1px solid rgba(24, 24, 32, 0.08);
+}
+
+.email-copy-chip {
+  position: relative;
+}
+
+.email-copy-chip__status {
+  padding: 4px 7px;
+  border-radius: 999px;
+  background: rgba(24, 24, 32, 0.06);
+  color: var(--muted-text-color);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  transition: 0.2s ease;
+}
+
+.email-copy-chip:hover {
+  color: var(--primary-text-color);
+  border-color: var(--accent-color);
+  background: rgba(255, 154, 0, 0.08);
+}
+
+.email-copy-chip:hover .email-copy-chip__status {
+  background: rgba(255, 154, 0, 0.16);
+  color: var(--accent-color);
+}
+
+.email-copy-chip:active {
+  transform: scale(0.98);
+}
+
+.email-copy-chip.is-copied {
+  border-color: #23a55a;
+  background: rgba(35, 165, 90, 0.08);
+  color: #137a3d;
+}
+
+.email-copy-chip.is-copied .email-copy-chip__status {
+  background: rgba(35, 165, 90, 0.14);
+  color: #137a3d;
+}
+
+.email-copy-chip.is-error {
+  border-color: #d92d20;
+  background: rgba(217, 45, 32, 0.08);
+  color: #b42318;
+}
+
+.email-copy-chip.is-error .email-copy-chip__status {
+  background: rgba(217, 45, 32, 0.12);
+  color: #b42318;
+}
+
+.email-copy-chip:focus-visible {
+  outline: 3px solid rgba(255, 154, 0, 0.28);
+  outline-offset: 3px;
+}
+
 .intro {
   display: flex;
   align-items: flex-start;

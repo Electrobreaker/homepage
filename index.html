@@ -6,6 +6,7 @@
   <title>Résumé</title>
   <link rel="stylesheet" href="styles.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -17,41 +18,44 @@
         <h1 class="contact-info__header">Artur Kostetskyi</h1>
         <h3 class="contact-info__sub-header">Full-Stack Developer</h3>
 
-<div class="contact_info_container">
+        <div class="contact_info_container">
 
-  <img 
-    class="contact-info__avatar" 
-    src="assets/avatar.png" 
-    alt="Artur Kostetskyi portrait" 
-  />
+          <img class="contact-info__avatar" src="assets/avatar.png" alt="Artur Kostetskyi portrait" />
 
-  <div class="contact-info__chips">
+          <div class="contact-info__chips">
 
-    <div class="contact-info__item">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-        <path
-          d="M341.8 72.6C329.5 61.2 310.5 61.2 298.3 72.6L74.3 280.6C64.7 289.6 61.5 303.5 66.3 315.7C71.1 327.9 82.8 336 96 336L112 336L112 512C112 547.3 140.7 576 176 576L464 576C499.3 576 528 547.3 528 512L528 336L544 336C557.2 336 569 327.9 573.8 315.7C578.6 303.5 575.4 289.5 565.8 280.6L341.8 72.6zM304 384L336 384C362.5 384 384 405.5 384 432L384 528L256 528L256 432C256 405.5 277.5 384 304 384z" />
-      </svg>
-      <span>Lviv, Ukraine</span>
-    </div>
+            <div class="contact-info__item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <path
+                  d="M341.8 72.6C329.5 61.2 310.5 61.2 298.3 72.6L74.3 280.6C64.7 289.6 61.5 303.5 66.3 315.7C71.1 327.9 82.8 336 96 336L112 336L112 512C112 547.3 140.7 576 176 576L464 576C499.3 576 528 547.3 528 512L528 336L544 336C557.2 336 569 327.9 573.8 315.7C578.6 303.5 575.4 289.5 565.8 280.6L341.8 72.6zM304 384L336 384C362.5 384 384 405.5 384 432L384 528L256 528L256 432C256 405.5 277.5 384 304 384z" />
+              </svg>
+              <span>Lviv, Ukraine</span>
+            </div>
 
-    <a 
-      href="https://www.linkedin.com/in/artur-kostetskyi-854779221/" 
-      class="contact-info__item"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-        <path
-          d="M512 96L127.9 96C110.3 96 96 110.5 96 128.3L96 511.7C96 529.5 110.3 544 127.9 544L512 544C529.6 544 544 529.5 544 511.7L544 128.3C544 110.5 529.6 96 512 96zM231.4 480L165 480L165 266.2L231.5 266.2L231.5 480L231.4 480zM198.2 160C219.5 160 236.7 177.2 236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160zM480.3 480L413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480z" />
-      </svg>
-      <span>LinkedIn</span>
-    </a>
+            <a href="https://www.linkedin.com/in/artur-kostetskyi-854779221/" class="contact-info__item" target="_blank"
+              rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <path
+                  d="M512 96L127.9 96C110.3 96 96 110.5 96 128.3L96 511.7C96 529.5 110.3 544 127.9 544L512 544C529.6 544 544 529.5 544 511.7L544 128.3C544 110.5 529.6 96 512 96zM231.4 480L165 480L165 266.2L231.5 266.2L231.5 480L231.4 480zM198.2 160C219.5 160 236.7 177.2 236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160zM480.3 480L413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
 
-  </div>
+            <button class="contact-info__item contact-info__item--email email-copy-chip" type="button"
+              data-email="artur.kostetskyi@gmail.com" aria-label="Copy email address">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <path
+                  d="M112 128C85.5 128 64 149.5 64 176V464C64 490.5 85.5 512 112 512H528C554.5 512 576 490.5 576 464V176C576 149.5 554.5 128 528 128H112zM528 176V184.7L320 312.7L112 184.7V176H528zM112 240.9L303.2 358.6C313.5 365 326.5 365 336.8 358.6L528 240.9V464H112V240.9z" />
+              </svg>
 
-</div>
-       
+              <span class="email-copy-chip__text">artur.kostetskyi@gmail.com</span>
+              <span class="email-copy-chip__status">Copy</span>
+            </button>
+
+          </div>
+
+        </div>
+
 
         <div class="intro">
 
@@ -69,8 +73,11 @@
           </div>
 
           <p class="intro_text">
-            I'm a software developer focused on building clean, scalable web applications.
-            I enjoy solving problems, learning new technologies and improving user experience through code.
+            I'm a full-stack developer who enjoys building clean and useful web applications.
+            I like solving problems, learning new technologies, and creating experiences that are simple and comfortable
+            to use.
+            I'm here to grow as a developer, strengthen my technical skills, and contribute to projects where thoughtful
+            design and reliable code matter.
           </p>
 
         </div>
@@ -82,7 +89,8 @@
       <div class="container">
         <h3 class="skills__header">Skills</h3>
         <p class="skills__text">
-          Problem solving, Continuous Learning, Team Collaboration
+          I work with HTML, CSS, JavaScript, React, Node.js, Git, and REST APIs.
+          I also focus on responsive layouts, clean code structure, problem solving, teamwork, and continuous learning.
         </p>
       </div>
     </section>
@@ -95,24 +103,45 @@
         <div class="experiences__company">
 
           <div class="experiences__company-header">
-            <span class="experiences__company-header-durability">2005–Present</span>
-            <h3 class="experiences__company-header-name">Binary Studio</h3>
+            <span class="experiences__company-header-durability">2021</span>
+            <h3 class="experiences__company-header-name">Covizmo</h3>
           </div>
 
           <div class="experiences__company-project">
-            <span class="experiences__company-project-role">Full-Stack Developer</span>
-            <h3 class="experiences__company-project-name">Hooman project</h3>
+            <span class="experiences__company-project-role">Junior Java Developer</span>
+            <h3 class="experiences__company-project-name">Azenzus project</h3>
 
             <ul class="experiences__company-project-responsibilities">
-              <li>Backend Architecture</li>
-              <li>Frontend Development</li>
-              <li>API Integration</li>
-              <li>Code Maintenance</li>
+              <li>Fixed frontend and backend bugs across the application</li>
+              <li>Developed automated tests for core product functionality using Selenium</li>
+              <li>Maintained existing features and improved code reliability</li>
             </ul>
           </div>
 
+
         </div>
 
+        <div class="experiences__company">
+
+          <div class="experiences__company-header">
+            <span class="experiences__company-header-durability">2022</span>
+            <h3 class="experiences__company-header-name">Customertimes</h3>
+          </div>
+
+          <div class="experiences__company-project">
+            <span class="experiences__company-project-role">Trainee Salesforce Developer</span>
+            <h3 class="experiences__company-project-name">Trailhead</h3>
+
+            <ul class="experiences__company-project-responsibilities">
+              <li>Completed Trailhead modules focused on Salesforce development fundamentals</li>
+              <li>Worked with Apex basics, SOQL queries, and Salesforce data models</li>
+              <li>Created custom objects, fields, and simple automation flows</li>
+              <li>Practiced building and configuring Salesforce applications in a training environment</li>
+            </ul>
+          </div>
+
+
+        </div>
       </div>
     </section>
 
@@ -123,12 +152,12 @@
           <h3 class="additional-info__education-header">Education</h3>
 
           <div class="additional-info__education-university">
-            <span class="additional-info__education-university-durability">2021</span>
+            <span class="additional-info__education-university-durability">2018-2022</span>
             <h3 class="additional-info__education-university-speciality">
-              Full-Stack Development
+              Bachelor's degree, Software Engineering
             </h3>
             <p class="additional-info__education-university-name">
-              Binary Studio Academy
+              Lviv Polytechnic National University
             </p>
           </div>
         </div>
