@@ -2,21 +2,28 @@
   --color-text-primary: #181820;
   --color-text-secondary: #5c5c62;
   --color-text-muted: rgba(106, 115, 125, 0.75);
+
   --color-accent: #ff9a00;
   --color-accent-soft: rgba(255, 154, 0, 0.16);
   --color-accent-subtle: rgba(255, 154, 0, 0.08);
+
   --color-border: rgba(24, 24, 32, 0.08);
   --color-surface: #ffffff;
   --color-page: #faf8f4;
+
   --color-success: #137a3d;
   --color-success-soft: rgba(35, 165, 90, 0.12);
+
   --color-error: #b42318;
   --color-error-soft: rgba(217, 45, 32, 0.12);
+
   --shadow-card: 0 24px 80px rgba(24, 24, 32, 0.08);
   --shadow-avatar: 0 12px 30px rgba(24, 24, 32, 0.12);
+
   --radius-card: 28px;
   --radius-block: 20px;
   --radius-pill: 999px;
+
   --container-width: 900px;
 }
 
@@ -76,6 +83,10 @@ svg {
   border-bottom: 0;
 }
 
+.resume__section--hero {
+  position: relative;
+}
+
 .profile__name,
 .profile__role {
   text-align: center;
@@ -114,26 +125,42 @@ svg {
 
 .profile__contacts {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .contact-chip {
   display: inline-flex;
   align-items: center;
-  width: fit-content;
+  justify-content: center;
   gap: 8px;
+  width: fit-content;
   padding: 8px 12px;
   color: var(--color-text-secondary);
   font-size: 14px;
   line-height: 1;
   text-decoration: none;
+  white-space: nowrap;
   background: transparent;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-pill);
-  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-chip__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.contact-chip__icon path {
+  fill: currentColor;
 }
 
 .contact-chip:hover {
@@ -147,18 +174,34 @@ svg {
   outline-offset: 3px;
 }
 
-.contact-chip__icon {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-}
-
-.contact-chip__icon path {
-  fill: currentColor;
-}
-
 .contact-chip--button {
   cursor: pointer;
+}
+
+.contact-chip--location {
+  user-select: none;
+  cursor: default;
+}
+
+.contact-chip--location.is-floating {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  will-change: transform;
+  box-shadow: 0 12px 30px rgba(24, 24, 32, 0.12);
+}
+
+.contact-chip--location.is-running {
+  color: var(--color-text-primary);
+  background: rgba(255, 154, 0, 0.12);
+  border-color: var(--color-accent);
+}
+
+.contact-chip-placeholder {
+  flex: 0 0 auto;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .email-copy-chip:active {
@@ -173,7 +216,9 @@ svg {
   line-height: 1;
   background: rgba(24, 24, 32, 0.06);
   border-radius: var(--radius-pill);
-  transition: color 0.2s ease, background-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .email-copy-chip:hover .email-copy-chip__status {
@@ -243,6 +288,42 @@ svg {
   text-transform: uppercase;
 }
 
+.pretext-flow {
+  position: relative;
+  width: 100%;
+  min-height: 96px;
+}
+
+.pretext-flow__source {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.pretext-flow.is-ready .pretext-flow__source {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.pretext-flow__lines {
+  position: relative;
+  width: 100%;
+}
+
+.pretext-flow__line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  pointer-events: none;
+  will-change: transform;
+  transition: opacity 0.12s ease;
+}
+
 .experience-list {
   display: grid;
   gap: 28px;
@@ -308,6 +389,32 @@ svg {
   padding-left: 18px;
 }
 
+.hobbies__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.hobbies__item {
+  padding: 16px;
+  background: rgba(255, 154, 0, 0.04);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+}
+
+.hobbies__item-title {
+  margin: 0 0 8px;
+  color: var(--color-text-primary);
+  font-size: 15px;
+}
+
+.hobbies__item-text {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -336,42 +443,29 @@ svg {
     gap: 12px;
   }
 
-  .additional-info {
+  .additional-info,
+  .hobbies__grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 }
 
-.hobbies__header {
-  color: var(--primary-text-color);
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 16px;
-}
+@media (prefers-reduced-motion: reduce) {
+  .contact-chip--location.is-floating {
+    position: static;
+    transform: none !important;
+  }
 
-.hobbies__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
+  .pretext-flow__lines {
+    display: none;
+  }
 
-.hobbies__item {
-  padding: 16px;
-  border: 1px solid var(--border-color);
-  border-radius: 18px;
-  background: rgba(255, 154, 0, 0.04);
-}
-
-.hobbies__item-title {
-  color: var(--primary-text-color);
-  font-size: 15px;
-  margin-bottom: 8px;
-}
-
-.hobbies__item-text {
-  color: var(--secondary-text-color);
-  font-size: 14px;
-  line-height: 1.5;
+  .pretext-flow.is-ready .pretext-flow__source {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    white-space: normal;
+    clip-path: none;
+  }
 }
