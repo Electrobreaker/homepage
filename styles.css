@@ -1,29 +1,24 @@
+/* stylelint-disable selector-class-pattern */
+
 :root {
   --color-text-primary: #181820;
   --color-text-secondary: #5c5c62;
-  --color-text-muted: rgba(106, 115, 125, 0.75);
-
+  --color-text-muted: rgb(106 115 125 / 75%);
   --color-accent: #ff9a00;
-  --color-accent-soft: rgba(255, 154, 0, 0.16);
-  --color-accent-subtle: rgba(255, 154, 0, 0.08);
-
-  --color-border: rgba(24, 24, 32, 0.08);
-  --color-surface: #ffffff;
+  --color-accent-soft: rgb(255 154 0 / 16%);
+  --color-accent-subtle: rgb(255 154 0 / 8%);
+  --color-border: rgb(24 24 32 / 8%);
+  --color-surface: #fff;
   --color-page: #faf8f4;
-
   --color-success: #137a3d;
-  --color-success-soft: rgba(35, 165, 90, 0.12);
-
+  --color-success-soft: rgb(35 165 90 / 12%);
   --color-error: #b42318;
-  --color-error-soft: rgba(217, 45, 32, 0.12);
-
-  --shadow-card: 0 24px 80px rgba(24, 24, 32, 0.08);
-  --shadow-avatar: 0 12px 30px rgba(24, 24, 32, 0.12);
-
+  --color-error-soft: rgb(217 45 32 / 12%);
+  --shadow-card: 0 24px 80px rgb(24 24 32 / 8%);
+  --shadow-avatar: 0 12px 30px rgb(24 24 32 / 12%);
   --radius-card: 28px;
   --radius-block: 20px;
   --radius-pill: 999px;
-
   --container-width: 900px;
 }
 
@@ -125,18 +120,18 @@ svg {
 
 .profile__contacts {
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
 }
 
 .contact-chip {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
   width: fit-content;
+  gap: 8px;
   padding: 8px 12px;
   color: var(--color-text-secondary);
   font-size: 14px;
@@ -160,7 +155,7 @@ svg {
 }
 
 .contact-chip__icon path {
-  fill: currentColor;
+  fill: currentcolor;
 }
 
 .contact-chip:hover {
@@ -170,7 +165,7 @@ svg {
 }
 
 .contact-chip:focus-visible {
-  outline: 3px solid rgba(255, 154, 0, 0.28);
+  outline: 3px solid rgb(255 154 0 / 28%);
   outline-offset: 3px;
 }
 
@@ -185,23 +180,23 @@ svg {
 
 .contact-chip--location.is-floating {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   z-index: 999;
+  box-shadow: 0 12px 30px rgb(24 24 32 / 12%);
   will-change: transform;
-  box-shadow: 0 12px 30px rgba(24, 24, 32, 0.12);
 }
 
 .contact-chip--location.is-running {
   color: var(--color-text-primary);
-  background: rgba(255, 154, 0, 0.12);
+  background: rgb(255 154 0 / 12%);
   border-color: var(--color-accent);
 }
 
 .contact-chip-placeholder {
   flex: 0 0 auto;
-  pointer-events: none;
   visibility: hidden;
+  pointer-events: none;
 }
 
 .email-copy-chip:active {
@@ -214,7 +209,7 @@ svg {
   font-size: 11px;
   font-weight: 600;
   line-height: 1;
-  background: rgba(24, 24, 32, 0.06);
+  background: rgb(24 24 32 / 6%);
   border-radius: var(--radius-pill);
   transition:
     color 0.2s ease,
@@ -229,23 +224,23 @@ svg {
 .email-copy-chip.is-copied {
   color: var(--color-success);
   background: var(--color-success-soft);
-  border-color: rgba(35, 165, 90, 0.65);
+  border-color: rgb(35 165 90 / 65%);
 }
 
 .email-copy-chip.is-copied .email-copy-chip__status {
   color: var(--color-success);
-  background: rgba(35, 165, 90, 0.14);
+  background: rgb(35 165 90 / 14%);
 }
 
 .email-copy-chip.is-error {
   color: var(--color-error);
   background: var(--color-error-soft);
-  border-color: rgba(217, 45, 32, 0.65);
+  border-color: rgb(217 45 32 / 65%);
 }
 
 .email-copy-chip.is-error .email-copy-chip__status {
   color: var(--color-error);
-  background: rgba(217, 45, 32, 0.12);
+  background: rgb(217 45 32 / 12%);
 }
 
 .intro {
@@ -254,7 +249,7 @@ svg {
   gap: 18px;
   margin-top: 36px;
   padding: 22px;
-  background: rgba(255, 154, 0, 0.07);
+  background: rgb(255 154 0 / 7%);
   border-radius: var(--radius-block);
 }
 
@@ -269,7 +264,7 @@ svg {
 }
 
 .intro__icon path {
-  fill: currentColor;
+  fill: currentcolor;
 }
 
 .intro__text,
@@ -315,13 +310,13 @@ svg {
 
 .pretext-flow__line {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   color: var(--color-text-secondary);
   white-space: nowrap;
   pointer-events: none;
-  will-change: transform;
   transition: opacity 0.12s ease;
+  will-change: transform;
 }
 
 .experience-list {
@@ -397,7 +392,7 @@ svg {
 
 .hobbies__item {
   padding: 16px;
-  background: rgba(255, 154, 0, 0.04);
+  background: rgb(255 154 0 / 4%);
   border: 1px solid var(--color-border);
   border-radius: 18px;
 }
@@ -424,10 +419,10 @@ svg {
   overflow: hidden;
   white-space: nowrap;
   border: 0;
-  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (width <= 576px) {
   .container {
     padding: 0 22px;
   }
