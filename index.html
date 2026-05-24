@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,7 +10,7 @@
   />
   <title>Artur Kostetskyi — Résumé</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="script.js" defer></script>
+  <script src="script.js" type="module" defer></script>
 </head>
 
 <body>
@@ -27,8 +28,18 @@
           />
 
           <div class="profile__contacts" aria-label="Contact information">
-            <div class="contact-chip">
-              <svg class="contact-chip__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true" focusable="false">
+            <div
+              class="contact-chip contact-chip--location"
+              data-runaway-location
+              aria-label="Location: Lviv, Ukraine"
+            >
+              <svg
+                class="contact-chip__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+                aria-hidden="true"
+                focusable="false"
+              >
                 <path d="M341.8 72.6C329.5 61.2 310.5 61.2 298.3 72.6L74.3 280.6C64.7 289.6 61.5 303.5 66.3 315.7C71.1 327.9 82.8 336 96 336L112 336L112 512C112 547.3 140.7 576 176 576L464 576C499.3 576 528 547.3 528 512L528 336L544 336C557.2 336 569 327.9 573.8 315.7C578.6 303.5 575.4 289.5 565.8 280.6L341.8 72.6zM304 384L336 384C362.5 384 384 405.5 384 432L384 528L256 528L256 432C256 405.5 277.5 384 304 384z" />
               </svg>
               <span>Lviv, Ukraine</span>
@@ -40,7 +51,13 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <svg class="contact-chip__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true" focusable="false">
+              <svg
+                class="contact-chip__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+                aria-hidden="true"
+                focusable="false"
+              >
                 <path d="M512 96L127.9 96C110.3 96 96 110.5 96 128.3L96 511.7C96 529.5 110.3 544 127.9 544L512 544C529.6 544 544 529.5 544 511.7L544 128.3C544 110.5 529.6 96 512 96zM231.4 480L165 480L165 266.2L231.5 266.2L231.5 480L231.4 480zM198.2 160C219.5 160 236.7 177.2 236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160zM480.3 480L413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480z" />
               </svg>
               <span>LinkedIn</span>
@@ -52,7 +69,13 @@
               data-email="artur.kostetskyi@gmail.com"
               aria-label="Copy email address"
             >
-              <svg class="contact-chip__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true" focusable="false">
+              <svg
+                class="contact-chip__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+                aria-hidden="true"
+                focusable="false"
+              >
                 <path d="M112 128C85.5 128 64 149.5 64 176V464C64 490.5 85.5 512 112 512H528C554.5 512 576 490.5 576 464V176C576 149.5 554.5 128 528 128H112zM528 176V184.7L320 312.7L112 184.7V176H528zM112 240.9L303.2 358.6C313.5 365 326.5 365 336.8 358.6L528 240.9V464H112V240.9z" />
               </svg>
               <span class="email-copy-chip__text">artur.kostetskyi@gmail.com</span>
@@ -63,17 +86,27 @@
 
         <div class="intro" aria-label="Profile summary">
           <div class="intro__icon-wrapper" aria-hidden="true">
-            <svg class="intro__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" focusable="false">
+            <svg
+              class="intro__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              focusable="false"
+            >
               <path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z" />
             </svg>
           </div>
 
-          <p class="intro__text">
-            I'm a full-stack developer who enjoys building clean and useful web applications.
-            I like solving problems, learning new technologies, and creating experiences that are simple and comfortable
-            to use. I'm here to grow as a developer, strengthen my technical skills, and contribute to projects where
-            thoughtful design and reliable code matter.
-          </p>
+          <div class="intro__text pretext-flow" data-pretext-flow>
+            <p class="pretext-flow__source">
+              I'm a full-stack developer focused on building clean, scalable, and user-friendly web applications.
+              I enjoy solving practical problems, learning new technologies, and improving the small details that make
+              digital experiences feel better.
+              I'm here to grow as a developer, strengthen my technical skills, and contribute to projects where
+              thoughtful design and reliable code matter.
+            </p>
+
+            <div class="pretext-flow__lines" aria-hidden="true"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -142,7 +175,7 @@
             <h3 class="section-title" id="education-heading">Education</h3>
 
             <div class="education-card">
-              <span class="education-card__period">2018-2022</span>
+              <span class="education-card__period">2018–2022</span>
               <h4 class="education-card__degree">Bachelor's degree, Software Engineering</h4>
               <p class="education-card__school">Lviv Polytechnic National University</p>
             </div>
@@ -158,41 +191,43 @@
         </div>
       </div>
     </section>
-    <section class="resume__block">
-  <div class="container">
-    <h3 class="hobbies__header">Hobbies & Interests</h3>
 
-    <div class="hobbies__grid">
-      <div class="hobbies__item">
-        <h4 class="hobbies__item-title">Cooking</h4>
-        <p class="hobbies__item-text">
-          I enjoy experimenting with recipes, learning new techniques, and turning simple ingredients into something special.
-        </p>
-      </div>
+    <section class="resume__section" aria-labelledby="hobbies-heading">
+      <div class="container">
+        <h2 class="section-title" id="hobbies-heading">Hobbies & Interests</h2>
 
-      <div class="hobbies__item">
-        <h4 class="hobbies__item-title">Fishing</h4>
-        <p class="hobbies__item-text">
-          Fishing helps me slow down, stay patient, and enjoy quiet time outdoors.
-        </p>
-      </div>
+        <div class="hobbies__grid">
+          <article class="hobbies__item">
+            <h3 class="hobbies__item-title">Cooking</h3>
+            <p class="hobbies__item-text">
+              I enjoy experimenting with recipes, learning new techniques, and turning simple ingredients into something special.
+            </p>
+          </article>
 
-      <div class="hobbies__item">
-        <h4 class="hobbies__item-title">Dota 2</h4>
-        <p class="hobbies__item-text">
-          I like the strategic side of Dota 2: teamwork, decision-making, and adapting quickly to changing situations.
-        </p>
-      </div>
+          <article class="hobbies__item">
+            <h3 class="hobbies__item-title">Fishing</h3>
+            <p class="hobbies__item-text">
+              Fishing helps me slow down, stay patient, and enjoy quiet time outdoors.
+            </p>
+          </article>
 
-      <div class="hobbies__item">
-        <h4 class="hobbies__item-title">Anime</h4>
-        <p class="hobbies__item-text">
-          I enjoy anime for its storytelling, visual style, and creative worlds.
-        </p>
+          <article class="hobbies__item">
+            <h3 class="hobbies__item-title">Dota 2</h3>
+            <p class="hobbies__item-text">
+              I like the strategic side of Dota 2: teamwork, decision-making, and adapting quickly to changing situations.
+            </p>
+          </article>
+
+          <article class="hobbies__item">
+            <h3 class="hobbies__item-title">Anime</h3>
+            <p class="hobbies__item-text">
+              I enjoy anime for its storytelling, visual style, and creative worlds.
+            </p>
+          </article>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
   </main>
 </body>
+
 </html>
